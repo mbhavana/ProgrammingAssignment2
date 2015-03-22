@@ -7,7 +7,7 @@ makeCacheMatrix <- function(x = matrix()) {
   m<-NULL 
   
   set<-function(y){
-    x<<-y     # setting the value of X to Y
+    x<<-y     # setting the value of X to Y which is passed argument of this function.
     
     m<<-NULL  # Assigning m to Null value for makeCacheMAtrix environment
   }
@@ -30,6 +30,6 @@ cacheSolve <- function(x, ...) {
   }
   matrix<-x$get()       # gets the value of matrix from makeCacheMatrix and assigns it to matrix
   m<-solve(matrix, ...)  # gets the inverse of matrix
-  x$setmatrix(m)    # sets the matrix value 
+  x$setmatrix(m)    # sets the matrix value to the new value
   m    #returns the inverse of matrix
 }
